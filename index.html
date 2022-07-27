@@ -13,6 +13,9 @@
         <p id="welcome-msg">Welcome to The Mini Paint App! </p>
     </div>
     <canvas id="canvas" width="1000" height="550"></canvas>
+    <div class="webcam">
+           <video autoplay="true" id="videoElement"></video>
+    </div>
     <div class="myTools">
        
         <button id="delete">❎</button>
@@ -20,7 +23,12 @@
         <input type="range" min="5" max="30" value="15" id="penSlider">
         <span id="span"></span>
     </div>
-    
+    <script>
+        let vid = document.querySelector("#videoElement")
+        navigator.mediaDevices.getUserMedia({video:true}).then(function(stream){
+            video.srcObject = stream;
+        })
+    </script>
 </body>
 
 </html>
