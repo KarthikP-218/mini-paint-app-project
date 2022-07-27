@@ -71,3 +71,9 @@ canvas {
     font-size: 18px;
     font-weight: bolder;
 }
+
+.webcam #videoElement{
+    height: 375px;
+    width: 500px;
+    background-color: #666;
+}
